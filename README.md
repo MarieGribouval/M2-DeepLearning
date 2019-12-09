@@ -3,7 +3,7 @@
 ## Résumé de l'article "The Application of Convolutional Neural Network for Pollen Bearing Bee Classification" de Tomyslav Sledevic, 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering
 
 
-## Introduction :
+## Introduction
 
   La survie des abeilles est cruciale puisque en plus de produire par exemple du miel, elles permettent la pollinisation d’une grande partie des plantes à fleurs. Sans elles l’agriculture serait en péril. Afin de surveiller la bonne santé d’une ruche, les agriculteurs l’ouvrent pour vérifier plusieurs paramètres comme le nombre d’œufs, la présence de varroa,… Néanmoins cette vérification est une source de stress importante pour la ruche et peut même lui être néfaste. Dans le climat actuel où la survie des abeilles devient un problème mondial, il est important de trouver une solution non invasive pour surveiller la santé de la ruche.
 
@@ -13,7 +13,7 @@ Les auteurs ont pour objectif de pouvoir à partir d’une image, prédire si l�
 
 La 2ème section décrit la base de données utilisée, ensuite, la configuration du CNN est détaillée dans la section 3, puis dans la dernière section, les auteurs présentent les résultats qu’ils ont obtenu. 
 
-## Partie 2 - Pollen Bearing Bee Dataset :
+## Partie 2 - Pollen Bearing Bee Dataset 
 
   Des images d’entrée de ruches ont été prises, sur ces images de base des images de taille 100x100 pixels sont extraites à l’endroit où une abeille est détectée. Grâce à cela une base de donnée contenant 1000 images avec des abeilles portant du pollen, et 1000 autres sans est créée. 
 L’orientation des abeilles n’a pas été modifiée suite à l’extraction dans l’éventualité où cela est étudié ultérieurement. Sur certaines images les abeilles sont partiellement visibles à cause des ombres ou de l’entrée de la ruche.
@@ -33,3 +33,4 @@ Finalement, pour l’application FPGA, l’architecture est la suivante : 3 couc
 
 ## Conclusion
 
+  Différentes architectures de CNN ont pu être comparé dans ce papier. Cela permet de choisir le CNN optimal à utiliser dans l’application pour détecter le pollen sur les abeilles. Dans un contexte réel, il faut au préalable détecter les régions d’intérêt des images prises.
