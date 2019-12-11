@@ -14,9 +14,6 @@ Les auteurs ont pour objectif de pouvoir à partir d’une image, prédire si l�
 La 2ème section décrit la base de données utilisée, ensuite, la configuration du CNN est détaillée dans la section 3, puis dans la dernière section, les auteurs présentent les résultats qu’ils ont obtenus. 
 
 ## Partie 2 - Pollen Bearing Bee Dataset 
-![Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification." In 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering (AIEEE), pp. 1-4. IEEE, 2018.](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/model.jpg)
-
-(Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification.")
 
   Des images d’entrée de ruches ont été prises, sur ces images de base des images de taille 100x100 pixels sont extraites à l’endroit où une abeille est détectée. Grâce à cela une base de donnée contenant 1000 images avec des abeilles portant du pollen, et 1000 autres sans est créée. 
 L’orientation des abeilles n’a pas été modifiée suite à l’extraction dans l’éventualité où cela est étudié ultérieurement. Sur certaines images les abeilles sont partiellement visibles à cause des ombres ou de l’entrée de la ruche.
@@ -26,6 +23,10 @@ L’orientation des abeilles n’a pas été modifiée suite à l’extraction d
 Pour l’apprentissage du CNN, 10% des données de train sont utilisées pour la validation. La couche d’entrée reçoit des images en couleur RGB ou HSV. Le nombre de couche cachée varie de un à trois afin de comparer l’impact de ce paramètre. 
 Chaque couche est composée d’une convolution qui permet d’extraire plusieurs caractéristiques (selon le nombre de filtres choisi) puis d’un max polling de taille 2x2 qui diminue les dimensions des images obtenues à la sortie de la convolution. Entre les deux, une normalisation des données est réalisée. A l’issu du dernier max polling, toutes nos images construites dans les couches cachées sont réunies en un unique vecteur, et, enfin ce vecteur est réduit à un scalaire. Cela est représenté par “Fully Connected” dans le schéma.
 La couche de sortie classifie chaque image comme ayant ou non du pollen selon le scalaire.
+
+![Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification." In 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering (AIEEE), pp. 1-4. IEEE, 2018.](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/model.jpg)
+
+(Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification.")
 
 ## Partie 4 - Classification results
 
