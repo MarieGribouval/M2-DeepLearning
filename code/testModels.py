@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import StratifiedShuffleSplit
 from keras.callbacks import ModelCheckpoint
+from keras.callbacks.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -14,7 +15,7 @@ cwd = 'C:\_leshan\school\M2SID\DL\BeeImage\data\\'
 os.chdir(cwd)
 import model
 
-Xname = 'XbeeRGB'
+Xname = 'XbeeRGB' # Or could be XenhbeeRGB or XenhbeeHSV or XbeeHSV
 X = np.load(cwd + Xname + '.npy')
 X = X.astype('float32')
 X /= 255
@@ -50,16 +51,17 @@ for ycol in ycols:
 #    Y = Y[['zip code', 'subspecies', 'health']]
     
     batch_size = 8
-    epoch = 20
+    epoch = 100
     #print(Xtrain.shape)
     #print(Ytrain.shape)
     
     bee_model = model.model((Xtrain.shape[1],Xtrain.shape[2],Xtrain.shape[3]),(Ytrain.shape[0],Ytrain.shape[1]))
     #print(bee_model.summary())
-    checkpoint = ModelCheckpoint('models\\model_%s_%s.h5'%(Xname, ycol[:4]), verbose=1, monitor='accuracy', 
+    checkpoint = ModelCheckpoint('models\\model_%s_%s.h5'%(Xname, ycol[:4]), verbose=1, monitor='val_loss', 
                                  save_best_only=True, mode='auto')  
+    earlyStopping = EarlyStopping(monitor='val_loss', patience=20, verbose=1, mode='auto')
     mod_fitted = bee_model.fit(Xtrain, Ytrain, batch_size=batch_size, epochs=epoch, 
-                               validation_split=0.1, callbacks=[checkpoint], verbose=False)
+                               validation_split=0.1, callbacks=[checkpoint, earlyStopping], verbose=False)
 
     loss_train = mod_fitted.history['loss']
     loss_valid = mod_fitted.history['val_loss']
