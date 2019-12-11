@@ -14,7 +14,7 @@ Les auteurs ont pour objectif de pouvoir à partir d’une image, prédire si l�
 La 2ème section décrit la base de données utilisée, ensuite, la configuration du CNN est détaillée dans la section 3, puis dans la dernière section, les auteurs présentent les résultats qu’ils ont obtenus. 
 
 ## Partie 2 - Pollen Bearing Bee Dataset 
-
+![Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification." In 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering (AIEEE), pp. 1-4. IEEE, 2018.](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/model used.jpg)
   Des images d’entrée de ruches ont été prises, sur ces images de base des images de taille 100x100 pixels sont extraites à l’endroit où une abeille est détectée. Grâce à cela une base de donnée contenant 1000 images avec des abeilles portant du pollen, et 1000 autres sans est créée. 
 L’orientation des abeilles n’a pas été modifiée suite à l’extraction dans l’éventualité où cela est étudié ultérieurement. Sur certaines images les abeilles sont partiellement visibles à cause des ombres ou de l’entrée de la ruche.
 
