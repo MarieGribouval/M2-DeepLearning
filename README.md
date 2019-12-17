@@ -27,7 +27,7 @@ The targets of this project is to:
 ## 📊 Discussion of Results
 
 
-With very few effective iterations, ***we obtained the results very close to the article with classification accuracy rates (90.89%) in terms of subspecies and accuracy (91.71%) in terms of health.***
+With very few effective iterations, ***we obtained the results very close to the article with classification accuracy rates (90.89%) in terms of subspecies and (91.71%) in terms of health.***
 
 ### Data Set
 
