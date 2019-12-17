@@ -13,11 +13,16 @@ We use the same data set from kaggle as in the article. We achieved the purpose 
 
 (For more details of the article, please find our summary of the article (Résumé de l'article) in [RESUME.md](./RESUME.md).
 
+
 ## 🚩 Targets
 The targets of this project is to:
+
 + implement the **data pre-processing and model building** for reproducing the experiment
+
 + test the **performance of RGB and HSV inputs** under very few layers of network
-+ compare **the speed of CPU with Jetson GPU**.
+
++ compare **the speed of CPU with Jetson GPU**
+
 
 ## 📊 Discussion of Results
 
@@ -65,9 +70,9 @@ During training, we obtained some curves as shown in the figure:
 
 ![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/rgb2layers.jpg)
 
-It is worth noting that since we set Early Stopping of 20 Epochs and only save the optimal model (Loss of Validation is the smallest). In that case, we actually used the model stored in the sixth Epoch during the test phase, instead of the model after "overfitting".
+It is worth noting that since we set Early Stopping of 20 Epochs and only save the optimal model (Loss of Validation is the smallest). In that case, **we actually used the model stored in the 6th Epoch during the test phase, instead of the model after "overfitting".**
 
-With the same method (checkpoint + earlystopping), we obtained the following results:
+With the same method (**checkpoint + earlystopping**), we obtained the following results:
 
 ![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/accuracy.jpg)
 
