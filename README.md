@@ -29,9 +29,9 @@ The purpose of this project is to implement the **data pre-processing and model 
     | Type          | Data lines    |
     | ------------- | ------------- |
     | Total         | 4098          |
-    | Train         | 2582          |
-    | Valid         |  287          |
-    | Test          | 1220          |
+    | Train         | 2582 (63%)    |
+    | Valid         |  287 (07%)    |
+    | Test          | 1220 (30%)    |
 
 
 
