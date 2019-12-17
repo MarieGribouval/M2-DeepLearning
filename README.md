@@ -27,15 +27,10 @@ The purpose of this project is to implement the **data pre-processing and model 
   We used keras' **strtified data splitting** function to ensure that the label proportion (distribution) of the training set and the test set is basically the same.
   
     | Type          | Data lines    |
-    
     | ------------- | ------------- |
-   
     | Total         | 4098          |
-    
     | Train         | 2582          |
-    
     | Valid         |  287          |
-    
     | Test          | 1220          |
 
 
