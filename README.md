@@ -29,7 +29,7 @@ The targets of this project is to:
 
 With very few effective iterations, ***we obtained the results very close to the article with classification accuracy rates (90.89%) in terms of subspecies and accuracy (91.71%) in terms of health.***
 
-### Data set
+### Data Set
 
   The original dataset we used consists of 4744 rows of data, where **X is a photo of the bee** and **Y is the label** of the photo (about the region, health level, honey carried, subpecies, etc.).
   
@@ -45,7 +45,7 @@ With very few effective iterations, ***we obtained the results very close to the
     | Test          | 1220 (30%)    |
 
 
-### Model and experimental parameters
+### Model and Experimental Parameters
 
 The model we used (and proposed by the article) is shown in the figure:
 ![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/model.jpg)
@@ -81,6 +81,6 @@ With the same method (**checkpoint + earlystopping**), we obtained the following
 > *`3 layers` of HSV means we added another convolution layer, which is another trick mentionned in the article.*
 
 
-## ⌨️ Flow chart of code
+## ⌨️ Flow Chart of Code
 
 ![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/flowchart.jpg)
