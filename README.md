@@ -1,6 +1,6 @@
-# M2-DeepLearning
+# Résumé de l'article (M2SID - Deep Learning Project)
 
-## Résumé de l'article "The Application of Convolutional Neural Network for Pollen Bearing Bee Classification" de Tomyslav Sledevic, 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering
+Résumé de l'article "The Application of Convolutional Neural Network for Pollen Bearing Bee Classification" de Tomyslav Sledevic, 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering
 
 
 ## Introduction
@@ -24,7 +24,7 @@ Pour l’apprentissage du CNN, 10% des données de train sont utilisées pour la
 Chaque couche est composée d’une convolution qui permet d’extraire plusieurs caractéristiques (selon le nombre de filtres choisi) puis d’un max polling de taille 2x2 qui diminue les dimensions des images obtenues à la sortie de la convolution. Entre les deux, une normalisation des données est réalisée. A l’issu du dernier max polling, toutes nos images construites dans les couches cachées sont réunies en un unique vecteur, et, enfin ce vecteur est réduit à un scalaire. Cela est représenté par “Fully Connected” dans le schéma.
 La couche de sortie classifie chaque image comme ayant ou non du pollen selon le scalaire.
 
-![Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification." In 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering (AIEEE), pp. 1-4. IEEE, 2018.](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/model.jpg)
+![Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification." In 2018 IEEE 6th Workshop on Advances in Information, Electronic and Electrical Engineering (AIEEE), pp. 1-4. IEEE, 2018.](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/model.jpg)
 
 (Model proposed in article Sledevič, Tomyslav. "The application of convolutional neural network for pollen bearing bee classification.")
 
