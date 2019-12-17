@@ -18,7 +18,8 @@ The purpose of this project is to implement the **data pre-processing and model 
 
 ## 📊 Discussion of Results
 
-With very few effective iterations, we obtained the results very close to the article with classification accuracy rates(90.89%) in terms of subspecies and accuracy (91.71%) in terms of health.
+
+With very few effective iterations, ***we obtained the results very close to the article with classification accuracy rates (90.89%) in terms of subspecies and accuracy (91.71%) in terms of health.***
 
 ### Data set
 
@@ -26,7 +27,27 @@ With very few effective iterations, we obtained the results very close to the ar
   
   In our experiments, we used 4098 pieces of data smaller than 100 * 100 pixels. We selected **health and subpecies** as the Y to predict(classify) in 2 independent models.
   
-  We used keras' **strtified data splitting** function to ensure that the label proportion (distribution) of the training set and the test set is basically the same.
+  We used keras' **stratified data splitting** function to ensure that the label proportion (distribution) of the training set and the test set is basically the same.
+  
+### Model and experimental parameters
+
+The model we used (and proposed by the article) is shown in the figure:
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/model.jpg)
+
+
+After testing various parameters in the experiment, we selected the following parameters and training trick:
+
+```python
+	#...
+    batch_size = 8
+    epoch = 100
+	#...
+    checkpoint = ModelCheckpoint('models\\model_%s_%s.h5'%(Xname, ycol[:4]), monitor='val_loss', 
+								 save_best_only=True, mode='auto')  
+    earlyStopping = EarlyStopping(monitor='val_loss', patience=20, verbose=1, mode='auto')
+	#...
+```
+
   
     | Type          | Data          |
     | ------------- | ------------- |
@@ -35,6 +56,7 @@ With very few effective iterations, we obtained the results very close to the ar
     | Valid         |  287 (07%)    |
     | Test          | 1220 (30%)    |
 
+### Data set
 
 
 
