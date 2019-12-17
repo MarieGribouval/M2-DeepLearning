@@ -83,6 +83,18 @@ With the same method (**checkpoint + earlystopping**), we obtained the following
 
 ## ⌨️ Code Description
 
+```flow
+st=>start: Dataset Downloaded
+op1=>operation: Enhance + Padding + ToTensor <br/> ((./preprocessing.py))
+op2=>operation: Enhance + Padding + ToTensor <br/> ((./preprocessing.py))
+op2=>operation: Enhance + Padding + ToTensor <br/> ((./preprocessing.py))
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op1->op2->op3->cond
+cond(yes)->e
+cond(no)->op
+```
 
 
 
