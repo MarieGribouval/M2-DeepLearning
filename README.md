@@ -81,32 +81,6 @@ With the same method (**checkpoint + earlystopping**), we obtained the following
 > *`3 layers` of HSV means we added another convolution layer, which is another trick mentionned in the article.*
 
 
-## ⌨️ Work Flow
+## ⌨️ Flow chart of code
 
-```flow
-st=>start: Dataset Downloaded
-op1=>operation: Enhance + Padding + ToTensor <br/> (./code/preprocessing.py)
-cond0=>condition: Using RGB?
-op11=>operation: Import ./code/model.py
-op12=>operation: Import ./code/model_HSV.py
-op2=>operation: Train + Test (./code/testModels.py)
-cond1=>condition: Using GPU Prediction?
-op3=>operation: Converting for GPU (./code/freezeModel.py)
-op31=>operation: GPU prediction (./code/pred_jetson.py)
-op4=>operation: Demo (./code/demo.py)
-e=>end: Finish
-
-st->op1->cond0
-cond0(yes)->op11
-cond0(no)->op12
-op11->op2
-op12->op2
-op2->cond1
-cond1(yes)->op3->op31->op4
-cond1(no)->op4
-op4->e
-```
-
-
-
-
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/flowchart.jpg)
