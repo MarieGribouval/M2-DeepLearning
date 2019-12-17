@@ -13,8 +13,11 @@ We use the same data set from kaggle as in the article. We achieved the purpose 
 
 (For more details of the article, please find our summary of the article (Résumé de l'article) in [RESUME.md](./RESUME.md).
 
-## 🚩 Target
-The purpose of this project is to implement the **data pre-processing and model building** for reproducing the experiment from the original article, and to **test the performance of RGB and HSV** inputs under very few layers of network, comparing **the speed of CPU with Jetson GPU**.
+## 🚩 Targets
+The targets of this project is to:
++ implement the **data pre-processing and model building** for reproducing the experiment
++ test the **performance of RGB and HSV inputs** under very few layers of network
++ compare **the speed of CPU with Jetson GPU**.
 
 ## 📊 Discussion of Results
 
@@ -69,6 +72,7 @@ With the same method (checkpoint + earlystopping), we obtained the following res
 ![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/accuracy.jpg)
 
 > *`RGB-enh` means we adjusted the saturation and brightness of the image in order to enhance the image quality.*
+
 > *`3 layers` of HSV means we added another convolution layer, which is another trick mentionned in the article.*
 
 
