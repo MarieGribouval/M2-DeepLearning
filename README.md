@@ -28,7 +28,15 @@ With very few effective iterations, ***we obtained the results very close to the
   In our experiments, we used 4098 pieces of data smaller than 100 * 100 pixels. We selected **health and subpecies** as the Y to predict(classify) in 2 independent models.
   
   We used keras' **stratified data splitting** function to ensure that the label proportion (distribution) of the training set and the test set is basically the same.
-  
+    
+    | Type          | Data          |
+    | ------------- | ------------- |
+    | Total         | 4098          |
+    | Train         | 2582 (63%)    |
+    | Valid         |  287 (07%)    |
+    | Test          | 1220 (30%)    |
+
+
 ### Model and experimental parameters
 
 The model we used (and proposed by the article) is shown in the figure:
@@ -39,26 +47,29 @@ After testing various parameters in the experiment, we selected the following pa
 
 ```python
 	#...
-    batch_size = 8
-    epoch = 100
+    	batch_size = 8
+    	epoch = 100
 	#...
-    checkpoint = ModelCheckpoint('models\\model_%s_%s.h5'%(Xname, ycol[:4]), monitor='val_loss', 
+    	checkpoint = ModelCheckpoint('models\\model_%s_%s.h5'%(Xname, ycol[:4]), monitor='val_loss', 
 								 save_best_only=True, mode='auto')  
-    earlyStopping = EarlyStopping(monitor='val_loss', patience=20, verbose=1, mode='auto')
+    	earlyStopping = EarlyStopping(monitor='val_loss', patience=20, verbose=1, mode='auto')
 	#...
 ```
 
-  
-    | Type          | Data          |
-    | ------------- | ------------- |
-    | Total         | 4098          |
-    | Train         | 2582 (63%)    |
-    | Valid         |  287 (07%)    |
-    | Test          | 1220 (30%)    |
 
-### Data set
+### Experimental Results
+During training, we obtained some curves as shown in the figure:
 
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/rgb2layers.jpg)
 
+It is worth noting that since we set Early Stopping of 20 Epochs and only save the optimal model (Loss of Validation is the smallest). In that case, we actually used the model stored in the sixth Epoch during the test phase, instead of the model after "overfitting".
+
+With the same method (checkpoint + earlystopping), we obtained the following results:
+
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/accuracy.jpg)
+
+> *`RGB-enh` means we adjusted the saturation and brightness of the image in order to enhance the image quality.*
+> *`3 layers` of HSV means we added another convolution layer, which is another trick mentionned in the article.*
 
 
 ## ⌨️ Code Description
