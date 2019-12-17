@@ -18,6 +18,8 @@ The purpose of this project is to implement the **data pre-processing and model 
 
 ## 📊 Discussion of Results
 
+With very few effective iterations, we obtained the results very close to the article with classification accuracy rates(90.89%) in terms of subspecies and accuracy (91.71%) in terms of health.
+
 ### Data set
 
   The original dataset we used consists of 4744 rows of data, where **X is a photo of the bee** and **Y is the label** of the photo (about the region, health level, honey carried, subpecies, etc.).
