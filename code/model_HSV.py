@@ -1,3 +1,11 @@
+
+'''
+# Created on Thu Nov 28 12:00:52 2019
+# @title : Deep Bees - Model HSV
+# @author: Marie Gribouval, Léo Boule and Leshanshui YANG
+'''
+
+
 import keras
 
 from keras.layers import Conv2D, MaxPooling2D, Input, Dense, Flatten
@@ -5,6 +13,7 @@ from keras.models import Model
 
 from keras.optimizers import Adam
 
+# Model with 3 convs  (To use on HSV images)
 def model(input_size,output_size):
     print(input_size)
     inputs = Input(shape=input_size)

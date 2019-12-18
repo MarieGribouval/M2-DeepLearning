@@ -87,6 +87,20 @@ With the same method (**checkpoint + earlystopping**), we obtained the following
 
 > *`3 layers` of HSV means we added another convolution layer, which is another trick mentionned in the article.*
 
+### Jetson Nano GPU vs i7 CPU
+
+If we compare the processing time on a i7-8750 CPU and on the Jetson GPU, we have these results:
+
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/Jetson_results.jpg)
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/CPU_results.jpg)
+
+We can see that the speed of the CPU is higher for a 2 layers model (RGB), but is lower if it is a 3 layers model(HSV). It is probably because the model HSV is more complex, so the GPU will be the best solution in this case.
+Furthermore, the RGB prediction model is faster than HSV one, because it is a much simple model.
+
+Moreover, if we compare the fps for 20 and 200 images prediction (with scalling the 200 images one on the 20 images one), we can see that it is taking much time. It is probably because the Jetson has a lack of memory with a lot of images to predict, so it makes the prediction running slowly. However, it seems to be the same thing for the CPU.
+
+
+With the Jetson results, it proves that it would be possible if we want to use this program and the jetson as an embedded application. Processing time is enough fast to analyze if bees have any problem in real time.
 
 ## ⌨️ Flow Chart of Code
 

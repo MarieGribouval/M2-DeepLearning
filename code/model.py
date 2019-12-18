@@ -1,3 +1,10 @@
+
+'''
+# Created on Thu Nov 14 10:20:58 2019
+# @title : Deep Bees - Model
+# @author: Marie Gribouval, Léo Boule and Leshanshui YANG
+'''
+
 import keras
 
 from keras.layers import Conv2D, MaxPooling2D, Input, Dense, Flatten
@@ -5,6 +12,7 @@ from keras.models import Model
 
 from keras.optimizers import Adam
 
+#Model with 2 convs
 def model(input_size,output_size):
     print(input_size)
     inputs = Input(shape=input_size)
