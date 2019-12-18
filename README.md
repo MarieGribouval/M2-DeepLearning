@@ -91,8 +91,8 @@ With the same method (**checkpoint + earlystopping**), we obtained the following
 
 If we compare the processing time on a i7-8750 CPU and on the Jetson GPU, we have these results:
 
-![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/Jetson_results.jpg)
-![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/CPU_results.jpg)
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/Jetson_results.png)
+![](https://github.com/TilkeyYANG/M2-DeepLearning/raw/master/imgs/CPU_results.png)
 
 We can see that the speed of the CPU is higher for a 2 layers model (RGB), but is lower if it is a 3 layers model(HSV). It is probably because the model HSV is more complex, so the GPU will be the best solution in this case.
 Furthermore, the RGB prediction model is faster than HSV one, because it is a much simple model.
