@@ -9,7 +9,12 @@ Marie Gribouval, Léo Boule and Leshanshui YANG from University of Rouen
 ## 📑 Project Introduction
 Since the survival of bees is important to the environment of the planet, it is important to find a non-destructive solution to monitor the health of bees. To this end, we studied the article "The Application of Convolutional Neural Network for Pollen Bearing Bee Classification" in this project.
 
-We use the a [data set from kaggle](https://www.kaggle.com/jenny18/honey-bee-annotated-images) which fits our theme very well. We achieved the classification of bee species and health through a network with less than 10K parameters. We tested the model mentioned in the article and proposed some changes and experiment.
+The article is concerned about whether or not bees carry pollen. For our project, we are more interested in the protection of bees by **predicting the state of health of the bee**, especially if it carries mites (varroas).
+
+Varroa mites are parasites that settle on the bee's body which would weaken it. In some regions of the world it is the leading cause of bee mortality.
+When we found our database, other information about each image was given (like the subspecies for example). So we decided to classify this information as well to test our neuron network (by **applying our CNN to different classification tasks**.)
+
+We used a [data set from kaggle by jenny18](https://www.kaggle.com/jenny18/honey-bee-annotated-images) which fits our theme very well. We achieved the classification of bee species and health through a network with less than 10K parameters. We tested the model mentioned in the article and proposed some changes and experiment.
 
 (For more details of the article, please find our summary of the article (Résumé de l'article) in [RESUME.md](./RESUME.md).
 
