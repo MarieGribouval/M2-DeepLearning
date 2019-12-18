@@ -9,7 +9,7 @@ Marie Gribouval, Léo Boule and Leshanshui YANG from University of Rouen
 ## 📑 Project Introduction
 Since the survival of bees is important to the environment of the planet, it is important to find a non-destructive solution to monitor the health of bees. To this end, we studied the article "The Application of Convolutional Neural Network for Pollen Bearing Bee Classification" in this project.
 
-We use the same data set from kaggle as in the article. We achieved the purpose of bee species and health classification through a network with less than 10K parameters. We tested the model mentioned in the article and proposed some changes and experiment.
+We use the a data set from kaggle which fits our theme very well. We achieved the classification of bee species and health through a network with less than 10K parameters. We tested the model mentioned in the article and proposed some changes and experiment.
 
 (For more details of the article, please find our summary of the article (Résumé de l'article) in [RESUME.md](./RESUME.md).
 
