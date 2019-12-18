@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+'''
+# Created on Thu Nov 14 10:34:58 2019
+# @title : Deep Bees - Data Extraction and Cleansing
+# @author: Marie Gribouval, Léo Boule and Leshanshui YANG
+'''
+
+
 import os
 import numpy as np
 import pandas as pd
@@ -9,7 +17,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-#%  Loading data
+#%%  Loading data
 #cwd = 'C:/Users/leobo/OneDrive/Documents/Cours/DeepLearning/Projet/Dataset//'
 cwd = 'C:\_leshan\school\M2SID\DL\BeeImage\data\\'
 os.chdir(cwd)
@@ -97,8 +105,8 @@ for ycol in ycols:
 
 for ycol, accuracy in zip(ycols, acc_list):
     print('Accuary on %s:\n    %.2f%%'%(ycol,accuracy*100))
-
-# The Correct Prediction over all properties:
+  
+#% The Correct Prediction over all properties:
 nb_has_wrong = len(set(np.concatenate([i for i in wrong_ind])))
 print('2-properties all correct accuracy: %.2f%%'%(100-nb_has_wrong/len(Y_predict)*100))
 
